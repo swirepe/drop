@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <h1>Make a New Message</h1>
         <p>Messages last for fourteen days.</p>
-        <p><i> Hint: <span class="code"><a href="http://vim.sourceforge.net/">vim</a> document.txt &amp;&amp; <b><a href="https://www.gnupg.org/">gpg</a> <a href="https://www.gnupg.org/documentation/manuals/gnupg-devel/GPG-Configuration-Options.html">--compress-level</a> 9 <a href="https://www.gnupg.org/documentation/manuals/gnupg-devel/GPG-Input-and-Output.html#GPG-Input-and-Output">--base64</a> ...</b> </i></span></p>
+        <p><i> Hint: Try something like <span class="code"><a href="http://vim.sourceforge.net/">vim</a> document.txt &amp;&amp; <b><a href="https://www.gnupg.org/">gpg</a> <a href="https://www.gnupg.org/documentation/manuals/gnupg-devel/GPG-Configuration-Options.html">--compress-level</a> 9 <a href="https://www.gnupg.org/documentation/manuals/gnupg-devel/GPG-Input-and-Output.html#GPG-Input-and-Output">--base64</a> ...</b> </i></span></p>
         <br><br>
         <p>Your message:</p>
         

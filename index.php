@@ -4,13 +4,14 @@
     <title>Drop.onion</title>
 <style type="text/css">
 #messageTxt {
-    min-width: 600px;
-    min-height:600px;
+    width: 600px;
+    min-height:300px;
     border: 1px solid #d4d4d4;
     background-color: #F6F4F0;
     color: #444444;
     padding: 5px;
     margin: 0;
+    margin-left: 50px;
 }
 
 .key {
@@ -32,7 +33,7 @@
         $q=$_GET["key"];
         
         if( strlen(htmlspecialchars($q)) > 0 ) {
-            echo '<br><br><p>Your key: <span class="key">' . $q . '</span></p>';
+            echo '<br><p>Your most recent message\'s key: <span class="key">' . $q . '</span></p>';
         }
     ?>      
     
@@ -56,7 +57,7 @@
     
     <div id="messageTxt">&hellip;</div>
     
-    
+    <p><a id="saveUrl" href="/save.php?key=">Save</a></p>
     <p><a href="/new.php">Or make a new message.</a></p>
     
     <?php
