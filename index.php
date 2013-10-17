@@ -33,12 +33,12 @@
         $q=$_GET["key"];
         
         if( strlen(htmlspecialchars($q)) > 0 ) {
-            echo '<br><p>Your most recent message\'s key: <span class="key">' . $q . '</span></p>';
+            echo '<p>Your most recent message\'s key: <span class="key">' . $q . '</span></p>';
         }
     ?>      
     
     
-    <p><b>Enter the message key below.</b></p>
+    <p><b>Enter the message key below, <a href="/new.php">Or make a new message.</a>.</b></p>
     <form> 
         Message key: <input type="text" size="100" onkeyup="showMessage(this.value)"
             <?php

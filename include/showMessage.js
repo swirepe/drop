@@ -16,7 +16,7 @@ function showMessage(str){
     xmlhttp.onreadystatechange=function() {
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
           document.getElementById("messageTxt").innerHTML=xmlhttp.responseText;
-          document.getElementById("saveUrl").href="/save.php?key=" + xmlhttp.responseText;
+          document.getElementById("saveUrl").href="/save.php?key=" + str;
         }
     }
     
