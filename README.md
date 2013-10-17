@@ -19,11 +19,15 @@ Peter Swire - swirepe.com
 
 I hacked it together in an afternoon after accidentally eating seven (7) slices of pizza, then feeling too sick to go out.
 
-# Where is it?
+## Where is it?
 
 4fbcprg2rsx5t7ah.onion
 
-# License?
+## TODO?
+
+Enable ssl.  I've done it before, but I can't remember off the top of my head.
+
+## License?
 
 Public domain.  But if you use any part of it, send me an email?  I like those.
 
