@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $key = makeKey();
     $message= clean( $_POST["message"]);
     $fourteendays = 1209600;
-    $success = $memcache->put($key, $message, MEMCACHE_COMPRESSED, $fourteendays);
+    $success = $memcache->set($key, $message, MEMCACHE_COMPRESSED, $fourteendays);
     
     if($success) {
         // redirect to index with that key set
