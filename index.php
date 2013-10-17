@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-    <title>Dropsy.onion</title>
+    <title>Drop.onion</title>
 <style type="text/css">
 #messageTxt {
     min-width: 600px;
@@ -12,12 +12,31 @@
     padding: 5px;
     margin: 0;
 }
+
+.key {
+    font-weight:bold;
+    font-size:130%;
+    color:#33FF33;
+}
+
 </style>
         <script type="text/javascript" src="/include/showMessage.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     </head>
 <body>
-
+    <h1>The Message Repository</h1>
+    <p>Messages expire after fourteen days (1,209,600 seconds)</p>
+    
+    <?php
+        // show them their key
+        $q=$_GET["key"];
+        
+        if( strlen(htmlspecialchars($q)) > 0 ) {
+            echo '<br><br><p>Your key: <span class="key">' . $q . '</span></p>';
+        }
+    ?>      
+    
+    
     <p><b>Enter the message key below.</b></p>
     <form> 
         Message key: <input type="text" size="100" onkeyup="showMessage(this.value)"
@@ -32,13 +51,14 @@
         > <!-- end of input bar -->
     
     </form>
-    <p>Message</p>
+    <p>Message:</p>
     
     
     <div id="messageTxt">&hellip;</div>
     
     
     <p><a href="/new.php">Or make a new message.</a></p>
+    
     <?php
         $q=$_GET["key"];
         echo '<script type="text/javascript">';
