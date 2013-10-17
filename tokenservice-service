@@ -1,0 +1,83 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides: keyservice
+# Required-Start: 
+# Required-Stop: 
+# Should-Start: 
+# Should-Stop: 
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start and Stop 
+# Description: connect to port 32774 for a token
+### END INIT INFO
+
+pname="tokenservice"
+pidfile="/var/run/${pname}.pid"
+exe="/usr/local/bin/tokenservice"
+
+start() {
+    echo -n "Starting $pname : "
+    if [ -s ${pidfile} ]; then
+       RETVAL=1
+       echo -n "Already running! "
+       echo `cat ${pidfile}`
+    else
+       nohup nice ${exe} >/dev/null 2>&1 &
+       RETVAL=$?
+       PID=$!
+       echo $PID
+       echo $PID > ${pidfile}
+    fi
+}
+
+
+stop() {
+    echo -n "Shutting down $pname : "
+    kill `cat ${pidfile}`
+    RETVAL=$?
+    echo
+    if [ $RETVAL -eq 0 ]; then
+        echo "SUCCESS" 
+        rm -f ${pidfile}
+		else
+				echo "FAIL"
+		fi
+}
+
+restart() {
+    echo -n "Restarting $pname : "
+    stop
+    sleep 2
+    start
+}
+
+gateway() {
+    route -n | grep "^0.0.0.0"  | awk '{print $2}'
+    
+}
+
+
+
+case "$1" in
+    start)
+        start
+    ;;
+    stop)
+        stop
+    ;;
+    status)
+        status ${pname}
+    ;;
+    restart)
+        restart
+    ;;
+    *)
+        echo "Usage: $0 {start|stop|status|restart}"
+    ;; esac
+
+exit 0
+
+
+
+
+
