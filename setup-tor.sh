@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function add_torrc {
-    echo "$1" | sudo tee /etc/tor/torrc
+    echo "$1" | sudo tee --append /etc/tor/torrc
 }
 
 $HIDDEN_SERVICE_DIR=$HOME/drop_hidden_service
