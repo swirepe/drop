@@ -4,7 +4,7 @@
     <title>Dropsy.onion</title>
 <style type="text/css">
 #messageTxt {
-    min-width: 800px;
+    min-width: 600px;
     min-height:600px;
     border: 1px solid #d4d4d4;
     background-color: #F6F4F0;
