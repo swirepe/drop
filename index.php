@@ -2,7 +2,17 @@
 <html>
     <head>
     <title>Dropsy.onion</title>
-        <link rel="stylesheet" type="text/css" href="css" />
+<style type="text/css">
+#messageTxt {
+    min-width: 800px;
+    min-height:600px;
+    border: 1px solid #d4d4d4;
+    background-color: #F6F4F0;
+    color: #444444;
+    padding: 5px;
+    margin: 0;
+}
+</style>
         <script type="text/javascript" src="/include/showMessage.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     </head>
@@ -32,7 +42,7 @@
     <?php
         $q=$_GET["key"];
         echo '<script type="text/javascript">';
-        echo 'showMessage(' . $q . ');';
+        echo 'showMessage("' . $q . '");';
         echo '</script>';
     ?>
 </body>

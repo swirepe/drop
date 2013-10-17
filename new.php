@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
         <p>Your message</p>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            <textarea rows="50" cols="100" name="message">&hellip;
-            </textarea>
+            <textarea rows="50" cols="100" name="message">&hellip;</textarea>
+            <br />
             <input type="submit" value="Submit">
         </form>
         
