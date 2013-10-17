@@ -38,7 +38,7 @@
     ?>      
     
     
-    <p><b>Enter the message key below, <a href="/new.php">Or make a new message.</a>.</b></p>
+    <p><b>Enter the message key below,</b> <a href="/new.php">Or make a new message.</a></p>
     <form> 
         Message key: <input type="text" size="100" onkeyup="showMessage(this.value)"
             <?php
