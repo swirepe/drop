@@ -4,7 +4,7 @@ function add_torrc {
     echo "$1" | sudo tee --append /etc/tor/torrc
 }
 
-$HIDDEN_SERVICE_DIR=$HOME/drop_hidden_service
+HIDDEN_SERVICE_DIR=$HOME/drop_hidden_service
 mkdir $HIDDEN_SERVICE_DIR
 sudo chmod -R a+rw $HIDDEN_SERVICE_DIR
 
